@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(27, 66%, 92%);
+  font-family: "DM Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 60rem;
+  margin: 100px auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* background-color: red; */
+}
+
+.header {
+  background-color: hsl(10, 79%, 65%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  border-radius: 2rem;
+
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.icon img {
+  width: 8rem;
+}
+
+.balance {
+  color: hsl(33, 100%, 98%);
+}
+
+.balance p {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.balance h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.tracker {
+  padding: 5rem;
+  background-color: hsl(33, 100%, 98%);
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid hsl(27, 66%, 92%);
+  padding-bottom: 5rem;
+
+  margin-top: 3rem;
+}
+
+.tracker h2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.chart {
+  background-color: hsl(10, 79%, 65%);
+  width: 5.5rem;
+  height: 3rem;
+
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  transition: all 0.15s ease-in-out;
+}
+
+.chart:hover {
+  background-color: rgba(236, 119, 95, 0.7);
+}
+
+.monday {
+  height: 6.5rem;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+
+.monday:hover::before {
+  content: "$14.65";
+  position: absolute;
+  /* top: -2rem; */
+  top: 0;
+  background-color: hsl(25, 47%, 15%);
+  /* width: 5rem;
+    height: 2rem; */
+  color: hsl(27, 66%, 92%);
+  padding: 1rem 1rem;
+
+  transform: translate(-11%, -120%);
+
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.monday::after {
+  content: "mon";
+  position: absolute;
+  color: hsl(28, 10%, 53%);
+
+  bottom: 0;
+  font-size: 1.7rem;
+  transform: translate(30%, 110%);
+}
+
+.tuesday {
+  height: 12rem;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+
+.tuesday:hover::before {
+  content: "$41.76";
+  position: absolute;
+  /* top: -2rem; */
+  top: 0;
+  background-color: hsl(25, 47%, 15%);
+  /* width: 5rem;
+    height: 2rem; */
+  color: hsl(27, 66%, 92%);
+  padding: 1rem 1rem;
+
+  transform: translate(-10%, -120%);
+
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.tuesday::after {
+  content: "tue";
+  position: absolute;
+  color: hsl(28, 10%, 53%);
+
+  bottom: 0;
+  font-size: 1.6rem;
+  transform: translate(65%, 110%);
+}
+
+.wednesday {
+  height: 19rem;
+  background-color: hsl(186, 34%, 60%);
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+
+.wednesday:hover {
+  background-color: rgb(118, 181, 188, 0.7);
+}
+.wednesday:hover::before {
+  content: "$52.36";
+  position: absolute;
+  /* top: -2rem; */
+  top: 0;
+  background-color: hsl(25, 47%, 15%);
+  /* width: 5rem;
+  height: 2rem; */
+  color: hsl(27, 66%, 92%);
+  padding: 1rem 1rem;
+
+  transform: translate(-12%, -120%);
+
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.wednesday::after {
+  content: "wed";
+  position: absolute;
+  color: hsl(28, 10%, 53%);
+
+  bottom: 0;
+  font-size: 1.7rem;
+  transform: translate(30%, 110%);
+}
+
+.thursday {
+  height: 10rem;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+
+.thursday:hover::before {
+  content: "$31.07";
+  position: absolute;
+  /* top: -2rem; */
+  top: 0;
+  background-color: hsl(25, 47%, 15%);
+  /* width: 5rem;
+    height: 2rem; */
+  color: hsl(27, 66%, 92%);
+  padding: 1rem 1rem;
+
+  transform: translate(-10%, -120%);
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.thursday::after {
+  content: "thu";
+  position: absolute;
+  color: hsl(28, 10%, 53%);
+
+  bottom: 0;
+  font-size: 1.6rem;
+  transform: translate(65%, 110%);
+}
+
+.friday {
+  height: 7.5rem;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+
+.friday:hover::before {
+  content: "$22.21";
+  position: absolute;
+  /* top: -2rem; */
+  top: 0;
+  background-color: hsl(25, 47%, 15%);
+  /* width: 5rem;
+    height: 2rem; */
+  color: hsl(27, 66%, 92%);
+  padding: 1rem 1rem;
+
+  transform: translate(-9%, -120%);
+
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.friday::after {
+  content: "fri";
+  position: absolute;
+  color: hsl(28, 10%, 53%);
+
+  bottom: 0;
+  font-size: 1.6rem;
+  transform: translate(130%, 110%);
+}
+
+.saturday {
+  height: 14rem;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+
+.saturday:hover::before {
+  content: "$45.32";
+  position: absolute;
+  /* top: -2rem; */
+  top: 0;
+  background-color: hsl(25, 47%, 15%);
+  /* width: 5rem;
+    height: 2rem; */
+  color: hsl(27, 66%, 92%);
+  padding: 1rem 1rem;
+
+  transform: translate(-11%, -120%);
+
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.saturday::after {
+  content: "sat";
+  position: absolute;
+  color: hsl(28, 10%, 53%);
+
+  bottom: 0;
+  font-size: 1.6rem;
+  transform: translate(65%, 110%);
+}
+
+.sunday {
+  height: 8.5rem;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+
+.sunday:hover::before {
+  content: "$24.16";
+  position: absolute;
+  /* top: -2rem; */
+  top: 0;
+  background-color: hsl(25, 47%, 15%);
+  /* width: 5rem;
+    height: 2rem; */
+  color: hsl(27, 66%, 92%);
+  padding: 1rem 1rem;
+
+  transform: translate(-10%, -120%);
+
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+}
+
+.sunday::after {
+  content: "sun";
+  position: absolute;
+  color: hsl(28, 10%, 53%);
+
+  bottom: 0;
+  font-size: 1.6rem;
+  transform: translate(65%, 110%);
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.totals {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+}
+
+.totals p {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.totals h2 {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.percentage {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #666;
+  padding-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.percentage h4 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #000;
+  align-self: flex-end;
+}
